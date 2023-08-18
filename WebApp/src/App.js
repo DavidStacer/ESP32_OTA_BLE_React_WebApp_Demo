@@ -143,13 +143,13 @@ function CheckVersion(){
  */
 function PromptUserForUpdate(){
     Popup.create({
-      content: "Version " + softwareVersion + " is out of date. Update to " + latestCompatibleSoftware + "?",
+      content: "Version " + softwareVersion + " is out of date.   Try to Update to " + latestCompatibleSoftware + "?",
       buttons: {
           left: [{
               text: 'Yes',
               action: function () {
 				  // https://github.com/DavidStacer/ESP32_OTA_BLE_React_WebApp_Demo/raw/master/GithubRepo/v2.0.bin
-				fetch('https://github.com/DavidStacer/ESP32_OTA_BLE_React_WebApp_Demo/raw/master' + + latestCompatibleSoftware + '/GithubRepo/' + currentHardwareVersion + '.bin')
+				  fetch('https://github.com/DavidStacer/ESP32_OTA_BLE_React_WebApp_Demo/raw/master/GithubRepo/' + currentHardwareVersion + '.bin')
                 //fetch('https://raw.githubusercontent.com/DavidStacer/ESP32_OTA_BLE_React_WebApp_Demo/' + latestCompatibleSoftware + '/GithubRepo/' + currentHardwareVersion + '.bin')
                 .then(function (response) {
                   return response.arrayBuffer();
