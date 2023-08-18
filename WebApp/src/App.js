@@ -148,7 +148,9 @@ function PromptUserForUpdate(){
           left: [{
               text: 'Yes',
               action: function () {
-                fetch('https://raw.githubusercontent.com/DavidStacer/ESP32_OTA_BLE_React_WebApp_Demo/' + latestCompatibleSoftware + '/GithubRepo/' + currentHardwareVersion + '.bin')
+				  // https://github.com/DavidStacer/ESP32_OTA_BLE_React_WebApp_Demo/raw/master/GithubRepo/v2.0.bin
+				fetch('https://github.com/DavidStacer/ESP32_OTA_BLE_React_WebApp_Demo/raw/master' + + latestCompatibleSoftware + '/GithubRepo/' + currentHardwareVersion + '.bin')
+                //fetch('https://raw.githubusercontent.com/DavidStacer/ESP32_OTA_BLE_React_WebApp_Demo/' + latestCompatibleSoftware + '/GithubRepo/' + currentHardwareVersion + '.bin')
                 .then(function (response) {
                   return response.arrayBuffer();
                 })
