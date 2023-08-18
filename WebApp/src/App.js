@@ -100,7 +100,7 @@ function CheckVersion(){
     document.getElementById('sw_version').innerHTML = "Software: " + softwareVersion;
   })
   //Grab our version numbers from Github
-  .then(_ => fetch('https://raw.githubusercontent.com/sparkfun/ESP32_OTA_BLE_React_WebApp_Demo/master/GithubRepo/version.json'))
+  .then(_ => fetch('https://raw.githubusercontent.com/DavidStacer/ESP32_OTA_BLE_React_WebApp_Demo/master/GithubRepo/version.json'))
   .then(function (response) {
     // The API call was successful!
     return response.json();
@@ -148,7 +148,7 @@ function PromptUserForUpdate(){
           left: [{
               text: 'Yes',
               action: function () {
-                fetch('https://raw.githubusercontent.com/sparkfun/ESP32_OTA_BLE_React_WebApp_Demo/' + latestCompatibleSoftware + '/GithubRepo/' + currentHardwareVersion + '.bin')
+                fetch('https://raw.githubusercontent.com/DavidStacer/ESP32_OTA_BLE_React_WebApp_Demo/' + latestCompatibleSoftware + '/GithubRepo/' + currentHardwareVersion + '.bin')
                 .then(function (response) {
                   return response.arrayBuffer();
                 })
